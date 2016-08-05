@@ -1,6 +1,6 @@
 # mc-catalog-figs
 
-Output figures from the ASteCA analysis of the 239 Magellanic star clusters
+Output figures from the ASteCA analysis of 239 Magellanic star clusters.
 
 | Gal  | Names  | (RA, DEC) (J2000)  | [Fe/H] | log(age) | Mass (Mo)
 |---|---|---|---|---|---|
