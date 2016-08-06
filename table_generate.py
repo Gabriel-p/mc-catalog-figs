@@ -1,5 +1,6 @@
 
 from pyexcel_ods import ODSBook
+import urllib2
 
 
 def skip_comments(f):
@@ -78,6 +79,36 @@ def get_liter_data(as_names):
     return gal, lit_names, ra_dec
 
 
+def check_link(i, r, d):
+    """
+    Check for RA,DEC coordinates in simbad. start with 10 arcsec, and increase
+    up to 120 arcsec.
+    """
+    found_flag = False
+    for arcsec in [10., 30., 60., 120.]:
+        # Link to Simbad
+        s0 = "http://simbad.u-strasbg.fr/simbad/sim-coo?" +\
+            "Coord={}d+{}d&CooFrame=FK5&CooEpoch=2000&Coo".format(r, d) +\
+            "Equi=2000&CooDefinedFrames=none&Radius={}&".format(arcsec) +\
+            "Radius.unit=arcsec&submit=submit+query&CoordList="
+        try:
+            # Get latest version number. Wait 3 seconds and break out if
+            # there's no response from the server.
+            f = urllib2.urlopen(s0, timeout=10)
+            if "No astronomical object found" not in f.read():
+                print("  {}, {} found in {} arcsec.".format(r, d, arcsec))
+                found_flag = True
+                break
+        except:
+            print("Timeout in {} sec.".format(arcsec))
+
+    if found_flag is not True:
+        print("CLUSTER WAS NOT FOUND!")
+
+    s = "[{}]: ".format(i) + s0
+    return s
+
+
 def print_data(as_names, as_pars, gal, lit_names, ra_dec):
     """
     Print data to file.
@@ -95,15 +126,13 @@ def print_data(as_names, as_pars, gal, lit_names, ra_dec):
         simbad = []
         for i, d in enumerate(zip(*[o_gal, o_as_names, o_lit_names, o_ra_dec,
                                     o_as_pars])):
-            print d
+            # Split data to write to file.
             g, n, on, r, d, m, a, ma = d[0], d[1], d[2],\
                 str(round(d[3][0], 5)), str(round(d[3][1], 5)),\
                 d[4][0], d[4][1], d[4][2]
-            # Link to Simbad
-            s = "[{}]: http://simbad.u-strasbg.fr/simbad/sim-coo?".format(i) +\
-                "Coord={}d+{}d&CooFrame=FK5&CooEpoch=2000&Coo".format(r, d) +\
-                "Equi=2000&CooDefinedFrames=none&Radius=10&" +\
-                "Radius.unit=arcsec&submit=submit+query&CoordList="
+            # Get link with cluster data from Simbad.
+            print on
+            s = check_link(i, r, d)
             simbad.append(s)
 
             f_out.write("| {} | [{}](/mc_asteca_img_all/{}.png)"
