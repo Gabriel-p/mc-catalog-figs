@@ -116,7 +116,7 @@ coordinates to see a [Simbad][239] query centered on them.
 | LMC | [LW86, KMHK214](/mc_asteca_img_all/SL73.png) | [73.1875, -72.51778][106] | 0.008 | 9.25 | 1600.0 |
 | LMC | [LW87, KMHK217](/mc_asteca_img_all/SL72.png) | [73.225, -72.1725][107] | 0.012 | 8.3 | 1200.0 |
 | LMC | [KMHK229](/mc_asteca_img_all/KMHK229.png) | [73.4625, -69.57194][108] | 0.015 | 9.1 | 400.0 |
-| LMC | [SL89,ESO56SC23,KMHK239](/mc_asteca_img_all/NGC1751.png) | [73.55, -69.80694][109] | 0.012 | 9.1 | 9000.0 |
+| LMC | [NGC1751,SL89,ESO56SC23,KMHK239](/mc_asteca_img_all/NGC1751.png) | [73.55, -69.80694][109] | 0.012 | 9.1 | 9000.0 |
 | LMC | [H88-25,KMHK256](/mc_asteca_img_all/SL96.png) | [73.75417, -67.71417][110] | 0.008 | 9.15 | 2000.0 |
 | LMC | [H88-26](/mc_asteca_img_all/H88-26.png) | [73.7625, -67.96444][111] | 0.008 | 9.1 | 600.0 |
 | LMC | [KMHK286](/mc_asteca_img_all/H88-33.png) | [73.92083, -67.78333][112] | 0.01 | 8.3 | 200.0 |
