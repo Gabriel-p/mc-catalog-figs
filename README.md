@@ -187,7 +187,7 @@ coordinates to see a [Simbad][239] query centered on them.
 | LMC | [SL359,KMHK727](/mc_asteca_img_all/SL359.png) | [79.45417, -68.47278][177] | 0.002 | 9.5 | 4000.0 |
 | LMC | [LOGLE323](/mc_asteca_img_all/H88-265.png) | [79.52083, -69.17167][178] | 0.015 | 8.3 | 800.0 |
 | LMC | [LOGLE337](/mc_asteca_img_all/H88-269.png) | [79.67083, -69.07944][179] | 0.015 | 8.85 | 3000.0 |
-| LMC | [SL379,ESO56SC100](/mc_asteca_img_all/NGC1917.png) | [79.75833, -69.00111][180] | 0.002 | 9.15 | 4000.0 |
+| LMC | [NGC1917,SL379,ESO56SC100](/mc_asteca_img_all/NGC1917.png) | [79.75833, -69.00111][180] | 0.002 | 9.15 | 4000.0 |
 | LMC | [LOGLE361 ](/mc_asteca_img_all/H88-279.png) | [80.00833, -69.26111][181] | 0.01 | 8.6 | 1000.0 |
 | LMC | [SL397](/mc_asteca_img_all/SL397.png) | [80.05, -68.90417][182] | 0.015 | 8.0 | 2200.0 |
 | LMC | [HS247](/mc_asteca_img_all/HS247.png) | [80.4375, -68.91722][183] | 0.012 | 8.8 | 600.0 |
